@@ -9,13 +9,13 @@ import com.randude14.lotteryplus.Perm;
 import com.randude14.lotteryplus.LotteryPlus;
 
 public class UpdateCommand implements Command {
-	private static final String currentVersion = LotteryPlus.getVersion();
+	//private static final String currentVersion = LotteryPlus.getVersion();
 
 	public boolean execute(CommandSender sender, org.bukkit.command.Command cmd, String[] args) {
 		if(!LotteryPlus.checkPermission(sender, Perm.UPDATE)) {
 			return false;
 		}
-		LotteryPlus.updateCheck(sender, currentVersion);
+		LotteryPlus.updateCheck(sender, LotteryPlus.getVersion());
 		return true;
 	}
 

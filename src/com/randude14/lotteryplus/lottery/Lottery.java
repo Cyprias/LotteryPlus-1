@@ -814,7 +814,11 @@ public class Lottery implements Runnable {
 			Player pWinner = Bukkit.getPlayer(winner);
 			boolean rewarded = false;
 			if (pWinner != null) {
-				rewarded = Lottery.handleRewards(pWinner, lotteryName, rewards);
+				if (properties.getBoolean(Config.REWARD_IMMEDIATELY)){
+					rewarded = Lottery.handleRewards(pWinner, lotteryName, rewards);
+				} else {
+					ChatUtils.send(pWinner, "lottery.claim.notify");
+				}
 			}
 			if(!rewarded) {
 				ClaimManager.addClaim(winner, lotteryName, rewards);

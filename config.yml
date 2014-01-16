@@ -68,6 +68,8 @@ properties:
     # the default filter used in '/lottery list <page>'
     default-filter: ''
     
+    # Give the winner the items immediately rather then requiring them use the claim command. 
+    reward-immediately: true
 
 # various sign formats used in different states of a lottery
 #

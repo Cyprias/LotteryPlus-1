@@ -34,6 +34,7 @@ public class Config {
 	public static final Property<String> SIGN_TAG = new Property<String>("properties.sign-tag", "&a[Lottery+]");
 	public static final Property<String> MAIN_LOTTERY = new Property<String>("properties.main-lottery", "MAIN");
 	public static final Property<String> DEFAULT_FILTER = new Property<String>("properties.default-filter", "");
+	public static final Property<Boolean> REWARD_IMMEDIATELY = new Property<Boolean>("properties.reward-immediately", true);
 	
 	//SIGN FORMATS
 	public static final Property<String> UPDATE_SIGN_LINE_TWO = new Property<String>("sign-format.Update.line-2", "<name>");
